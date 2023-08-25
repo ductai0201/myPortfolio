@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Button, Form, Input, Upload, UploadProps, message } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import { UploadOutlined } from "@ant-design/icons";
-import { useCreateBlogMutation, useGetBlogByIdQuery, useUpdateBlogMutation } from "@/api/Blog";
+import { useGetBlogByIdQuery, useUpdateBlogMutation } from "@/api/Blog";
 import axios from "axios";
-import { Params, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 type FieldType = {
   title?: string;
@@ -16,8 +16,8 @@ const AdminblogUpdate: React.FC = () => {
   const [fileList, setFileList] = useState([]);
   const { id }: any = useParams();
   const { data }: any = useGetBlogByIdQuery(id);
-  const [update,{error}]:any = useUpdateBlogMutation()
-  const navigate = useNavigate()
+  const [update, { error }]: any = useUpdateBlogMutation();
+  const navigate = useNavigate();
   const [form] = Form.useForm();
   useEffect(() => {
     form.setFieldsValue(data);
@@ -55,23 +55,26 @@ const AdminblogUpdate: React.FC = () => {
       }
     }
   };
-  if(error) (
+  if (error)
     message.error({
       content: error?.data.message,
-    })
-  )
+    });
   const onFinish = async (values: any) => {
-   const url = await uploadFiles(files)
-   const dataUpdate =  {
-    _id:id,
-    title: values.title,
-    description: values.description,
-    content: values.content,
-    gallery: url
-   }
-   update(dataUpdate).then(()=> message.success({
-    content: "Update blog thành công"
-  })).then(()=> navigate('/admin/blogs'));
+    const url = await uploadFiles(files);
+    const dataUpdate = {
+      _id: id,
+      title: values.title,
+      description: values.description,
+      content: values.content,
+      gallery: url,
+    };
+    update(dataUpdate)
+      .then(() =>
+        message.success({
+          content: "Update blog thành công",
+        })
+      )
+      .then(() => navigate("/admin/blogs"));
   };
   return (
     <Form

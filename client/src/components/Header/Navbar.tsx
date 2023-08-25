@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ListItem from "./ListItem";
 import Logo from "@/assets/logo.png";
 import LogoImage from "./LogoImage";
@@ -61,7 +61,6 @@ const Navbar = () => {
                 </ul>
               </nav>
             </div>
-            
           </div>
         </div>
       </div>

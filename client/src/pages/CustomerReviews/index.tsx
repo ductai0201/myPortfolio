@@ -1,11 +1,9 @@
-import React from "react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import style from "@/pages/CustomerReviews/index.module.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import imgReviewUser from "@/assets/imageReview.jpg";
 import { useGetAllReviewQuery } from "@/api/Review";
 
 const CustomerReviews = () => {

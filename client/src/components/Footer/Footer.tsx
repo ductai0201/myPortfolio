@@ -1,4 +1,3 @@
-import React from "react";
 import LinkGroup from "./LinkGroup";
 import NavLink from "./NavLink";
 import LogoImage from "../Header/LogoImage";

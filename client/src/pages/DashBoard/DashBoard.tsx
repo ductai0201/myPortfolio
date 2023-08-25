@@ -1,13 +1,9 @@
-import React from 'react'
-
-type Props = {}
-
-const DashBoard = (props: Props) => {
+const DashBoard = () => {
   return (
     <>
-        <h2>Thống kê</h2>
+      <h2>Thống kê</h2>
     </>
-  )
-}
+  );
+};
 
-export default DashBoard
+export default DashBoard;

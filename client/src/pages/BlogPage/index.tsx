@@ -1,7 +1,5 @@
 import { useGetAllBlogQuery } from "@/api/Blog";
 import BlogCard from "@/components/BlogCard";
-import React from "react";
-
 const Blog = () => {
   const { data }: any = useGetAllBlogQuery();
 

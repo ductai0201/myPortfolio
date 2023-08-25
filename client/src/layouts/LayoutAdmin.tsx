@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
-  UploadOutlined,
   FundOutlined,
-  VideoCameraOutlined,
   HddOutlined,
   ProjectOutlined,
   TagOutlined,

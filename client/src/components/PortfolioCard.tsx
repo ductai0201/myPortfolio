@@ -1,9 +1,4 @@
-import React from "react";
-
-type Props = {};
-
 const PortfolioCard = ({
-  showCard,
   category,
   ImageHref,
   title,
@@ -12,9 +7,7 @@ const PortfolioCard = ({
 }: any) => {
   return (
     <>
-      <div
-        className={`w-full px-4 md:w-1/2 xl:w-1/3`}
-      >
+      <div className={`w-full px-4 md:w-1/2 xl:w-1/3`}>
         <div className="relative mb-12">
           <div className="overflow-hidden rounded-lg">
             <img src={ImageHref} alt="portfolio" className="w-full" />
