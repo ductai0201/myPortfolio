@@ -1,7 +1,7 @@
 import Navbar from "./Navbar";
 import SingleImage from "./SingleImage";
 import avt from "@/assets/hero-image-01.png";
-import pdf from "public/NguyenDangDucTai.pdf";
+import pdf from "@/assets/NguyenDangDucTai.pdf";
 const Hero = () => {
   return (
     <>
