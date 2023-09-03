@@ -1,6 +1,6 @@
-import Project from "../model/project";
-import Tag from "../model/tag";
-import { projectSchema } from "../schema/project";
+import Project from "../model/project.js";
+import Tag from "../model/tag.js";
+import { projectSchema } from "../schema/project.js";
 
 export const createProject = async (req, res) => {
   try {

@@ -5,7 +5,7 @@ import {
   getProjectById,
   removeProject,
   updateProject,
-} from "../controllers/project";
+} from "../controllers/project.js";
 
 const router = express.Router();
 

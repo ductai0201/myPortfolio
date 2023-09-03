@@ -1,9 +1,9 @@
 import express from "express";
 import mongoose from "mongoose";
-import blogRouter from "./src/router/Blog";
-import projectRouter from "./src/router/Project";
-import tagRouter from "./src/router/Tag";
-import reviewRouter from "./src/router/Review";
+import blogRouter from "./src/router/Blog.js";
+import projectRouter from "./src/router/Project.js";
+import tagRouter from "./src/router/Tag.js";
+import reviewRouter from "./src/router/Review.js";
 import cors from "cors";
 import "dotenv/config";
 

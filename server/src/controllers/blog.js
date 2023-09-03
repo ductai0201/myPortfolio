@@ -1,5 +1,5 @@
-import Blog from "../model/blog";
-import { blogSchema } from "../schema/blog";
+import Blog from "../model/blog.js";
+import { blogSchema } from "../schema/blog.js";
 
 export const createBlog = async (req, res) => {
   try {

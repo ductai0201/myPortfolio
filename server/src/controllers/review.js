@@ -1,5 +1,5 @@
-import Review from "../model/review";
-import { reviewSchema } from "../schema/review";
+import Review from "../model/review.js";
+import { reviewSchema } from "../schema/review.js";
 
 export const createReview = async (req, res) => {
   try {

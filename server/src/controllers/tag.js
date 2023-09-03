@@ -1,4 +1,4 @@
-import Tag from "../model/tag";
+import Tag from "../model/tag.js";
 import joi from "joi";
 
 const tagSchema = joi.object({
