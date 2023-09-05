@@ -1,4 +1,4 @@
-import express from "express";
+import express, { response } from "express";
 import mongoose from "mongoose";
 import blogRouter from "./src/router/Blog.js";
 import projectRouter from "./src/router/Project.js";
@@ -15,7 +15,11 @@ app.use("/api", blogRouter);
 app.use("/api", projectRouter);
 app.use("/api", tagRouter);
 app.use("/api", reviewRouter);
-mongoose
-  .connect(process.env.VITE_MONGOOSE)
-  .then(console.log("connect success"));
+try {
+  await mongoose.connect(process.env.VITE_MONGOOSE);
+  console.log("Connected to MongoDB successfully");
+} catch (error) {
+  console.error("Failed to connect to MongoDB:", error);
+}
+ 
 export const viteNodeApp = app;
