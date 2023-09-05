@@ -8,20 +8,20 @@
   ],
   "rewrites": [
     {
-      "source": "/api/blog/(.*)",
-      "destination": "/api/blog/$1"
+      "source": "/api/blogs/(.*)",
+      "destination": "/api/blogs/$1"
     },
     {
-      "source": "/api/project/(.*)",
-      "destination": "/api/project/$1"
+      "source": "/api/projects/(.*)",
+      "destination": "/api/projects/$1"
     },
     {
-      "source": "/api/tag/(.*)",
-      "destination": "/api/tag/$1"
+      "source": "/api/tags/(.*)",
+      "destination": "/api/tags/$1"
     },
     {
-      "source": "/api/review/(.*)",
-      "destination": "/api/review/$1"
+      "source": "/api/reviews/(.*)",
+      "destination": "/api/reviews/$1"
     },
     {
       "source": "/(.*)",
