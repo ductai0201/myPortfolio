@@ -7,8 +7,8 @@ import reviewRouter from "./src/router/Review.js";
 import cors from "cors";
 import "dotenv/config";
 
+const PORT = process.env.VITE_PORT || 8800
 const app = express();
-
 app.use(cors());
 app.use(express.json());
 app.use("/api", blogRouter);
@@ -21,5 +21,8 @@ try {
 } catch (error) {
   console.error("Failed to connect to MongoDB:", error);
 }
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server is running on port ${PORT}`);
+});
  
 export const viteNodeApp = app;
